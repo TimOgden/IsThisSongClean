@@ -48,9 +48,8 @@ public class SongForm extends HttpServlet {
             if(SongDatabase.shouldLoadOnStart())
                 SongDatabase.loadSongs();
         timesUsed++;
-        if (timesUsed % 50 == 0) {
-            SongDatabase.saveSongs();
-        }
+        //SongDatabase.saveSongs();
+        
 
         CurseDatabase.initDatabase();
         String title = request.getParameter("Title");
@@ -73,6 +72,7 @@ public class SongForm extends HttpServlet {
         if (!SongDatabase.songAlreadyExists(s)) {
             SongDatabase.addSong(s);
         }
+        SongDatabase.saveSongs();
         //to here.
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */

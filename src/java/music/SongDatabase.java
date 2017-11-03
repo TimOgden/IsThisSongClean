@@ -27,7 +27,7 @@ public class SongDatabase {
 
     private static ArrayList<Song> songList = new ArrayList<>();
 
-    private static final boolean LOAD_ON_START = false;
+    private static final boolean LOAD_ON_START = true;
     
     public static boolean shouldLoadOnStart() {
         return LOAD_ON_START;
@@ -107,12 +107,14 @@ public class SongDatabase {
         songList = new ArrayList<>();
         while(scan.hasNextLine()) {
             String s1 = scan.nextLine();
+            if(!scan.hasNextLine())
+                break;
             String s2 = scan.nextLine();
             String s3 = scan.nextLine();
-            int sexualInnuendos = Integer.parseInt(scan.nextLine());
-            int violence = Integer.parseInt(scan.nextLine());
-            int drugReferences = Integer.parseInt(scan.nextLine());
-            int timesVoted = Integer.parseInt(scan.nextLine());
+            int sexualInnuendos = (int)Double.parseDouble(scan.nextLine());
+            int violence = (int)Double.parseDouble(scan.nextLine());
+            int drugReferences = (int)Double.parseDouble(scan.nextLine());
+            int timesVoted = (int)Double.parseDouble(scan.nextLine());
             
             songList.add(new Song(s1,s2,s3, sexualInnuendos, violence, drugReferences, timesVoted));
         }
