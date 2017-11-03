@@ -1,0 +1,89 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 17, 2017, 5:50:43 PM
+    Author     : Tim
+*/
+
+#all {
+  width:100%;
+  left: 0;
+  right: 0;
+}
+div.title {
+    top:0;
+    left:0;
+    right:0;
+    text-align: center;
+    background: #5073a7;
+}
+
+div.result {
+    color: #5073a7;
+}
+
+#footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+
+#ratingVal {
+    
+}
+#contactMe {
+    color: white;
+}
+
+#buttonWExplanation {
+    
+}
+#footer-content {
+    bottom: 0px;
+    width: 100%;
+    padding-left: 10px;
+    left: 0;
+    right: 0;
+    background-color: #5073a7;
+}
+
+#rankingSliders {
+    display: none;
+}
+
+#buttonExplanation {
+    display: none;
+}
+div.all {
+}
+
+.contact {
+    color: white
+}
+
+.vals {
+    border: none;
+    padding-left: 5px;
+    padding-bottom: 10px;
+    
+}
+
+.vals:hover {
+    animation-name: example;
+    animation-duration: 1s;
+}
+
+.vals:focus {
+    outline: none;
+    border-bottom: 3px solid #64c6d6;
+}
+
+@keyframes example {
+    from {border-bottom; 0px solid cyan};
+    to {border-bottom: 3px solid cyan };
+}

@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>Is This Song Clean?</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="favicon.ico">
+        <link rel="stylesheet" type="text/css" href="./css/css.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        
+
+    </head>
+    <body>
+        <div class="container-fluid" id="all">
+            <div class="title"><h1>Is This Song Clean?</h1></div>
+            <form name="songForm" method="post" action="songServlet">
+
+                <div class="image">
+                    <h3>Enter a song title and artist and find out its cleanliness.</h3>
+                    <input class="vals" name="Title" placeholder="Enter title"><br>
+                    <input class="vals" name="Artists" placeholder="Enter artist"><br>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+            <br>
+            <div class="explanation">
+                <h3>Why should I use this site if Spotify/iTunes/Google Music tells me which songs are explicit?</h3>
+                <h4>While it is true that these services do provide a single flag for the explicitness of songs, they suffer from three separate problems:</h4>
+                <ul>
+                    <li>Explicit tags are done by humans and can often be incorrect and miss curse words in the music.</li>
+                    <li>These tags work as an on/off switch, rather than the multiple layers of cleanliness that Is This Song Clean provides for various social settings.</li>
+                    <li>These tags only rely on strictly explicit language, while Is This Song Clean can take user input to identify implied offensive material.</li>
+                </ul>
+            </div>
+            <div id="footer" class="panel-footer">
+                <div id="footer-content">
+                    <h4>My name is Tim, and I created IsThisSongClean. I am a freshman in college, and if you appreciate this application and want to help keep it a free service, a small donation would be greatly appreciated. Thank you!</h4>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                        <input type="hidden" name="cmd" value="_s-xclick">
+                        <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHTwYJKoZIhvcNAQcEoIIHQDCCBzwCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYAaB47uM68A1izK0K0XVpW80Yg2QBmBK8t7QRSfFzcBpBsih1xEIqAlgGVc0czlGO01uptr2dNdQHwILzd6DzJXU3BZTEPmqW/w+UQMHdiM8P0X0JtUw2OJhWoun0ql7CAPw3PsBzz065KyxNmEipOcHQ/nAsYWkJkUIFNS77dFIzELMAkGBSsOAwIaBQAwgcwGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQItBfaocJI4DaAgag6lUXphj53xGzemml6KkZCXRYM1CQ+9hLS16eNZnt+w3bRfI7Nim7HcI8oq+cOE8RdPgPciKlYCok0a9Hvmo7WR4P6+Yvn4z4IzHBrI79QfNGDPDl/bkgwiKnyFs75u6YFTK4VAmpe2n7tmwG5vpCzCV4Io1wxj4tNE7XFu3SraIenOhE2xskld8qYUMrC9kwlg7qcZ6mNNviIkrR6eNmVU09EJGsN4rKgggOHMIIDgzCCAuygAwIBAgIBADANBgkqhkiG9w0BAQUFADCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wHhcNMDQwMjEzMTAxMzE1WhcNMzUwMjEzMTAxMzE1WjCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMFHTt38RMxLXJyO2SmS+Ndl72T7oKJ4u4uw+6awntALWh03PewmIJuzbALScsTS4sZoS1fKciBGoh11gIfHzylvkdNe/hJl66/RGqrj5rFb08sAABNTzDTiqqNpJeBsYs/c2aiGozptX2RlnBktH+SUNpAajW724Nv2Wvhif6sFAgMBAAGjge4wgeswHQYDVR0OBBYEFJaffLvGbxe9WT9S1wob7BDWZJRrMIG7BgNVHSMEgbMwgbCAFJaffLvGbxe9WT9S1wob7BDWZJRroYGUpIGRMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbYIBADAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4GBAIFfOlaagFrl71+jq6OKidbWFSE+Q4FqROvdgIONth+8kSK//Y/4ihuE4Ymvzn5ceE3S/iBSQQMjyvb+s2TWbQYDwcp129OPIbD9epdr4tJOUNiSojw7BHwYRiPh58S1xGlFgHFXwrEBb3dgNbMUa+u4qectsMAXpVHnD9wIyfmHMYIBmjCCAZYCAQEwgZQwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tAgEAMAkGBSsOAwIaBQCgXTAYBgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0xNzEwMTkwMDI5MjZaMCMGCSqGSIb3DQEJBDEWBBQLdEbFvqXzVQsgI2gEWP+Gv886TjANBgkqhkiG9w0BAQEFAASBgCOBiUyt2ZZCv1Be1fBCf5Z5GF1IcjFYqXGwTtpwbxDY5l79+Lw02m+1gP7cHZ4ah0felEwxG+hhZmNzhrjoEkw5lzr7gii29owCBNgRjg4evph6cYbyfGD3vlNVLVmeiIs4qO32wFx+WmVqnimb6rq/O4hLeb0BNekoa68bQNUV-----END PKCS7-----
+                               ">
+                        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+
+
+                    </form>
+                    <div id="contactMe" class="contact">
+                        <a href="mailto:togden1999@gmail.com">Contact me for suggestions and comments</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
