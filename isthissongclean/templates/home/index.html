@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <h1>{% block title %}Is This Song Clean?{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+    <form method="post">
+        <label for="title">Song title</label>
+        <input name="title" id="title">
+        <label for="artist">Artist</label>
+        <input name="artist" id="artist">
+        <input type="submit" value="Search">
+    </form>
+{% endblock %}

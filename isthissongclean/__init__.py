@@ -22,8 +22,11 @@ def create_app(test_config=None):
     except OSError:
         pass
 
-    @app.route('/')
-    def hello_world():
-        return 'Hello world'
+    from . import db
+    db.init_app(app)
+
+    from . import homepage
+    app.register_blueprint(homepage.bp)
+    app.add_url_rule('/', endpoint='index')
 
     return app
